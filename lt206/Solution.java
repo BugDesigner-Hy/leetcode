@@ -12,7 +12,7 @@ public class Solution {
             tmp = tmp.next;
         }
 
-        ListNode listNode = reverseList(head);
+        ListNode listNode = reverseList1(head);
         ListNode tmpRes = listNode;
 
         System.out.println("-----reverse-----");
@@ -56,6 +56,22 @@ public class Solution {
         }
 
         return p1.next;
+    }
+
+    /**
+     * 	执行耗时:0 ms,击败了100.00% 的Java用户
+     * 	内存消耗:41.1 MB,击败了79.87% 的Java用户
+     * @param head
+     * @return
+     */
+    public static  ListNode reverseList1(ListNode head){
+        if(head==null || head.next==null){
+            return head;
+        }
+        ListNode last = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return last;
     }
 
 

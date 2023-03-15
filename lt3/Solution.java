@@ -1,14 +1,12 @@
 package lt3;
 
-import java.sql.Array;
 import java.util.*;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度
  */
-public class Code3 {
+public class Solution {
     public static void main(String[] args) {
         String s = "pwwkew";
         // int i = solution1(s);

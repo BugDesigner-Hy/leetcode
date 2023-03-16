@@ -30,7 +30,7 @@ public class LRUCache {
     }
 
     public void put(int key, int value) {
-        
+
         if(store.containsKey(key)){
             store.put(key,value);
             makeRencentlyKey(key);
